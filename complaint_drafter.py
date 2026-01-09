@@ -29,9 +29,15 @@ except ImportError:
             self.steps = steps
         
         def run(self, inputs: Dict[str, Any]) -> Dict[str, Any]:
-            """Mock run method"""
-            print("Mock Flow execution")
-            return {"status": "mock_execution"}
+            """Mock run method - returns sample outputs matching expected structure"""
+            print("Mock Flow execution - PocketFlow not installed")
+            print("Install PocketFlow for full functionality: pip install pocketflow")
+            return {
+                "facts_summary": "[Mock] Facts would be extracted and organized here",
+                "legal_claims": "[Mock] Legal claims would be identified here",
+                "draft_complaint": "[Mock] Draft complaint would be generated here",
+                "final_complaint": "[Mock] Final reviewed complaint would be here"
+            }
 
 # Load environment variables
 load_dotenv()
